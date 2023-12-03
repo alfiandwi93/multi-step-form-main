@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Ubuntu:400,500,700" />
+  <title>Frontend Mentor | Multi-step form</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; display: none;}
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <section id="main">
+    <div class="container-fluid position-relative">
+      <div class="row px-3 px-md-0 h-100 vh-100 d-flex justify-content-center align-items-center">
+        <div class="col-md-8 card position-relative">
+          <div class="row px-2 py-0 px-md-3 py-md-3 h-100">
+            <div class="col-md-4 py-4 px-5 position d-flex d-lg-block justify-content-center">
+               <div class="d-flex mt-lg-3 mt-0 mb-4">
+                  <div class="col-2">
+                    <div class="me-3 square active mt-1 d-flex justify-content-center align-items-center" data-name="1">1</div>
+                  </div>
+                  <div class="col-8 ms-4 d-none d-lg-block">
+                    <span>STEP 1</span>
+                    <h6>YOUR INFO</h6>
+                  </div>
+               </div>
+               <div class="d-flex mb-4">
+                  <div class="col-2">
+                    <div class="me-3 square mt-1 d-flex justify-content-center align-items-center" data-name="2">2</div>
+                  </div>
+                  <div class="col-8 ms-4 d-none d-lg-block">
+                    <span>STEP 2</span>
+                    <h6>SELECT PLAN</h6>
+                  </div>
+               </div>
+               <div class="d-flex mb-4">
+                  <div class="col-2">
+                    <div class="me-3 square mt-1 d-flex justify-content-center align-items-center" data-name="3">3</div>
+                  </div>
+                  <div class="col-8 ms-4 d-none d-lg-block">
+                    <span>STEP 3</span>
+                    <h6>ADD-ONS</h6>
+                  </div>
+               </div>
+               <div class="d-flex mb-4">
+                  <div class="col-2">
+                    <div class="me-3 square mt-1 d-flex justify-content-center align-items-center" data-name="4">4</div>
+                  </div>
+                  <div class="col-8 ms-4 d-none d-lg-block">
+                    <span>STEP 4</span>
+                    <h6>SUMMARY</h6>
+                  </div>
+               </div>
+            </div>
+            <div class="col-md-8 py-4 px-3 px-lg-5">
+              <form id="wizard-form" class="h-100 position-relative needs-validation" novalidate>
+                <div data-name="1" class="card active">
+                  <h1>Personal info</h1>
+                  <p>Please provide your name, email address, and phone number.</p>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Name</label>
+                    <input type="name" class="form-control" id="exampleInputName" aria-describedby="nameHelp" placeholder="e.g. Stephen King" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Email address</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="e.g. stephenking@lorem.com" required>
+                  </div>
+                  <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Phone Number</label>
+                    <input type="" class="form-control" id="exampleInputPhone" aria-describedby="phoneHelp" placeholder="e.g. +1 234 567 890" required>
+                  </div>
+                  <div class="col-12 control-button p-3 p-md-0 bottom-0 start-50 translate-middle-x">
+                    <div class="d-flex justify-content-end align-items-bottom">
+                      <button type="submit" class="btn btn-success">Next Step</button>
+                    </div>
+                  </div>
+                </div>
+                <div data-name="2" class="card">
+                  <h1>Select your plan</h1>
+                  <p>You have the option of monthly or yearly billing.</p>
+                  <div class="row">
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                      <a href="#" class="card option active p-3" data-value="Arcade">
+                      <div class="row d-flex align-items-center">
+                        <div class="col-lg-12 col-3">
+                          <img class="mb-md-5 mb-0" src="assets/images/icon-arcade.svg">
+                        </div>
+                        <div class="col-lg-12 col-9">
+                          <h6>Arcade</h6>
+                          <div id="price-arcade">$9/mo</div>
+                        </div>
+                      </div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                      <a href="#" class="card option p-3" data-value="Advance">
+                        <div class="row d-flex align-items-center">
+                          <div class="col-lg-12 col-3">
+                            <img class="mb-md-5 mb-0" src="assets/images/icon-advanced.svg">
+                          </div>
+                          <div class="col-lg-12 col-9">
+                            <h6>Advance</h6>
+                            <div id="price-advance">$12/mo</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-md-4 col-12 mb-3 mb-md-0">
+                      <a href="#" class="card option p-3" data-value="Pro">
+                        <div class="row d-flex align-items-center">
+                          <div class="col-lg-12 col-3">
+                            <img class="mb-md-5 mb-0" src="assets/images/icon-pro.svg">
+                          </div>
+                          <div class="col-lg-12 col-9">
+                            <h6>Pro</h6>
+                            <div id="price-pro">$15/mo</div>
+                          </div>
+                        </div>
+                      </a>
+                    </div>
+                    <div class="col-12 mt-md-5 mt-1">
+                      <div class="d-flex justify-content-center rounded align-items-center py-2" style="background-color: var(--magnolia);">
+                        <label class="form-check-label me-3 active" id="month" for="flexSwitchCheckUnChecked">
+                        Monthly
+                        </label>
+                          <div class="switch-container">
+                            <input type="checkbox" id="toggleSwitch" class="switch-input">
+                            <label for="toggleSwitch" class="switch-label"></label>
+                          </div>
+                        <label class="form-check-label ms-3" for="flexSwitchCheckChecked" id="year">
+                        Yearly
+                        </label>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col-12 control-button p-3 p-md-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex d-lg-inline justify-content-start">
+                        <button class="btn btn-primary">Go Back</button>
+                      </div>
+                    <div class="d-flex d-lg-inline justify-content-end">
+                        <button onclick="loadContent()" class="btn btn-success">Next Step</button>
+                    </div>
+                    </div>
+                    
+                  </div>
+                </div>
+                <div data-name="3" class="card">
+                  <div class="col-12">
+                    <h1>Pick add-ons</h1>
+                    <p>Add-ons help enhance your gaming experience.</p>
+                  </div> 
+                  <div class="row">
+                    <div id="content-container"></div>
+                  </div>
+                  <div class="col-12 control-button p-3 p-md-0">
+                    <div class="d-flex justify-content-between">
+                      <div class="d-flex d-lg-inline justify-content-start">
+                      <button onclick="cleararray()" class="btn btn-primary">Go Back</button>
+                    </div>
+                    <div class="d-flex d-lg-inline justify-content-end">
+                      <button onclick="finalData()" class="btn btn-success">Next Step</button>
+                    </div>
+                    </div>
+                     
+                  </div>
+                </div>
+                <div data-name="4" class="card">
+                  <div id="final-result" class="">
+                    <h1>Finishing up</h1>
+                    <p>Double-check everything looks OK before confirming</p>
+                    <div class="card p-4">
+                    <div id="finalOutput">
+                      <div class="row">
+                        <div class="col-6">
+                          <span>Arcade (Yearly)</span><br>
+                          <a href="">Change</a>
+                        </div>
+                        <div class="col-6 d-flex align-items-center justify-content-end result">
+                         $90/yr
+                        </div>
+                      </div>
+                    </div>
+                      <hr>
+                      <div id="optionArray">
+          
+                      </div>
+                    </div>
+                      <div id="allTotal">
+                        
+                      </div>
+                      <div class="col-12 control-button p-3 p-md-0">
+                      <div class="d-flex justify-content-between">
+                        <div class="d-flex d-lg-inline justify-content-start">
+                        <button onclick="clearlist()" class="btn btn-primary">Go Back</button>
+                      </div>
+                      <div class="d-flex d-lg-inline justify-content-end">
+                        <button class="btn btn-success" onclick="updateFinalResult()">Confirm</button>
+                      </div>
+                      </div>
+                  </div>
+                    </div>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Your Name Here</a>.
+  </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js" integrity="sha384-BBtl+eGJRgqQAUMxJ7pMwbEyER4l1g+O15P+16Ep7Q9Q+zqX6gSbd85u4mG4QzX+" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="script.js"></script>
+
+</body>
+</html>

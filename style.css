@@ -1,0 +1,348 @@
+:root {
+  --marine-blue: hsl(213, 96%, 18%);
+  --purplish-blue: hsl(243, 100%, 62%);
+  --pastel-blue: hsl(228, 100%, 84%);
+  --light-blue: hsl(206, 94%, 87%);
+  --strawberry-red: hsl(354, 84%, 57%);
+  --cool-gray: hsl(231, 11%, 63%);
+  --light-gray: hsl(229, 24%, 87%);
+  --magnolia: hsl(217, 100%, 97%);
+  --alabaster: hsl(231, 100%, 99%);
+  --white: hsl(0, 0%, 100%);
+  --font-ubuntu: 'Ubuntu', sans-serif;
+}
+
+body{
+	background-color: var(--magnolia);
+  font-family: var(--font-ubuntu);
+}
+
+#main .position {
+  width: 275px;
+  height: 560px;
+  background-image: url("assets/images/bg-sidebar-desktop.svg");
+  background-size: 98%; 
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+#main .card {
+  border: none;
+  border-radius: 15px;
+  background-color: var(--white);
+  box-shadow: 0px 10px 36px -3px rgba(0,0,0,0.1);
+}
+
+#wizard-form .card {
+  background-color: transparent;
+  box-shadow: none;
+  display: none;
+  height: 100%;
+  text-decoration: none;
+}
+
+#wizard-form .card.active {
+  display: block;
+}
+
+#wizard-form .btn{
+  font-weight: 500;
+}
+
+#wizard-form .btn.btn-success {
+  background-color: var(--marine-blue);
+  color: var(--white);
+}
+
+#wizard-form .btn.btn-success:hover {
+  background-color: hsl(213, 96%, 30%);
+}
+
+#wizard-form .btn.btn-primary {
+  background-color: transparent;
+  color: var(--cool-gray);
+  border: none;
+}
+
+#wizard-form .btn.btn-primary:hover {
+  color: var(--marine-blue);
+}
+
+#main .square {
+  border-radius: 50%;
+  height: 40px;
+  width: 40px;
+  color: var(--white);
+  background-color: transparent;
+  border-color: white;
+  border-width: 1px;
+  border-style: solid;
+  font-weight: 500;
+}
+
+#main span{
+  font-weight: 400;
+  color: var(--white);
+}
+
+#main h6{
+  font-weight: 700;
+  color: var(--white);
+}
+
+#main .square.active {
+  background-color: var(--light-blue);
+  color: var(--marine-blue);
+  border: none;
+}
+
+#wizard-form [data-name="1"] input:focus {
+  box-shadow: none;
+  background-color: white;
+  border: 1px solid var(--purplish-blue);
+}
+
+#wizard-form input{
+  font-weight: 500;
+  color: var(--marine-blue);
+}
+
+#wizard-form input::placeholder {
+  color: var(--cool-gray);
+}
+
+#wizard-form h1{
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+
+#wizard-form p{
+  color: var(--cool-gray);
+}
+
+#wizard-form label{
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+#wizard-form [data-name="2"] .card.option{
+  background-color: transparent;
+  border: 1px solid var(--light-blue);
+  color: var(--cool-gray);
+  display: block;
+}
+
+#wizard-form [data-name="3"] .card.option{
+  background-color: transparent;
+  border: 1px solid var(--light-blue);
+  color: var(--cool-gray);
+  display: block;
+  border-radius: 5px;
+}
+
+#wizard-form [data-name="3"] .card.option h6{
+  color: var(--marine-blue);
+}
+
+#wizard-form [data-name="3"] .card.option:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+#wizard-form [data-name="2"] .card.option:hover {
+  border: 1px solid var(--purplish-blue);
+}
+
+#wizard-form [data-name="2"] h6{
+  color: var(--marine-blue);
+  margin: 0px;
+}
+
+#wizard-form [data-name="2"] .card.option.active{
+  background-color: var(--magnolia);
+  border: 1px solid var(--purplish-blue);
+  display: block;
+}
+
+#wizard-form [data-name="3"] .card.option.active{
+  background-color: var(--magnolia);
+  border: 1px solid var(--purplish-blue);
+  display: block;
+}
+
+#wizard-form [data-name="3"] .card.option label{
+  color: var(--cool-gray);
+}
+
+#wizard-form [data-name="3"] .card.option p{
+  color: var(--purplish-blue);
+  margin: 0px;
+  font-weight: 500;
+}
+
+#wizard-form [data-name="3"] .form-check-input{
+  width: 17px;
+  height: 17px;
+}
+
+#wizard-form [data-name="2"] .form-check-input:checked{
+  background-color: var(--marine-blue);
+  border-color: none;
+} 
+
+#wizard-form [data-name="2"] .form-check-input:not(:checked) {
+  background-color: var(--marine-blue);
+}
+
+.switch-container {
+  position: relative;
+  display: inline-block;
+}
+
+.switch-input {
+  display: none;
+}
+
+.switch-label {
+  display: block;
+  width: 40px; /* Sesuaikan lebar switch */
+  height: 20px; /* Sesuaikan tinggi switch */
+  background-color: var(--marine-blue); /* Warna latar belakang switch dalam keadaan nonaktif */
+  border-radius: 10px; /* Membuat sudut switch membulat */
+  cursor: pointer;
+  position: relative;
+}
+
+.switch-label::after {
+  content: "";
+  width: 13px; /* Lebar pegangan switch */
+  height: 13px; /* Tinggi pegangan switch */
+  background-color: white; /* Warna pegangan switch */
+  border-radius: 50%;
+  position: absolute;
+  top: 15%;
+  left: 10%;
+  transition: transform 0.3s ease;
+}
+
+#wizard-form [data-name="2"] .switch-input:checked + .switch-label {
+  background-color: var(--marine-blue); /* Ganti warna latar belakang switch saat diaktifkan */
+}
+
+#wizard-form [data-name="2"] .switch-input:checked + .switch-label::after {
+  transform: translateX(20px);
+}
+
+#wizard-form [data-name="2"] .form-check-label.active{
+  color: var(--marine-blue);
+}
+
+#wizard-form [data-name="2"] .form-check-label{
+  color: var(--light-gray);
+}
+
+#wizard-form [data-name="4"] .card{
+  background-color: var(--magnolia);
+  display: block;
+}
+
+#wizard-form [data-name="4"] span{
+  color: var(--marine-blue);
+  font-weight: 700;
+}
+
+#wizard-form [data-name="4"] a{
+  color: mediumpurple;
+  font-weight: 400;
+}
+
+#wizard-form [data-name="4"] .result{
+  color: var(--marine-blue);
+  font-weight: 700;
+  font-size: 18px;
+}
+
+#wizard-form [data-name="4"] .subtotal{
+  color: var(--marine-blue);
+  font-weight: 500;
+}
+
+#wizard-form [data-name="4"] .final-total{
+  color: var(--purplish-blue);
+  font-weight: 700;
+  font-size: 24px;
+}
+
+#wizard-form [data-name="4"] p{
+  margin-top: 10ox;
+  margin-bottom: 10ox;
+}
+
+#main .control-button {
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+#wizard-form [data-name="4"] #final-result .w-100{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+@media (max-width: 767px) {
+
+  #main .position {
+    background-image: url("assets/images/bg-sidebar-mobile.svg");
+    background-size: 110%; 
+    position: fixed;
+    width: 100%;
+    height: 175px;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: -2;
+    margin: 0;
+  }
+
+  #main .control-button {
+    background-color: white;
+    position: fixed;
+  }
+
+  #wizard-form [data-name="2"] .card.option{
+    display: block;
+  }
+
+  #wizard-form [data-name="3"] .card.option label{
+    font-size: 12px;
+  }
+
+  #wizard-form [data-name="3"] .card.option p{
+    font-size: 12px;
+  }
+
+  #wizard-form [data-name="3"] .card.option h6{
+    font-size: 12px;
+    margin: 0px;
+  }
+
+  #wizard-form [data-name="4"] #final-result .w-100{
+    position: relative;
+    top: 0;
+    left: 0;
+    transform: translate(0, 0);
+  }
+
+}
+
+/* Stil khusus untuk layar dengan lebar antara 768px dan 991px */
+@media (max-width: 991px) {
+  /* Atur gaya CSS khusus untuk layar dengan lebar maksimum 991px di sini */
+}
+
+/* Stil khusus untuk layar dengan lebar antara 992px dan 1199px */
+@media (max-width: 1199px) {
+  /* Atur gaya CSS khusus untuk layar dengan lebar maksimum 1199px di sini */
+}
